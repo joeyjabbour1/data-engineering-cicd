@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Env & secrets
+.env
+*.pem
+*.key
+id_ed25519*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data
+*.csv
+*.parquet
+data/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
