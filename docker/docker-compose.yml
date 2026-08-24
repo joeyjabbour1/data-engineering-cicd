@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  order_pipeline:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: order_pipeline
+    volumes:
+      - ./src:/app/src
+    environment:
+      PYTHONUNBUFFERED: "1"
+    command: python -m order_pipeline

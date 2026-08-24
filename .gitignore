@@ -36,3 +36,12 @@ data/
 # dbt
 dbt/target/
 dbt/dbt_packages/
+
+
+# Ruff
+.ruff_cache/
+
+# Airflow
+airflow/logs/
+logs/
+plugins/
