@@ -1,7 +1,11 @@
 from datetime import datetime
 
 from airflow import DAG
-from airflow.providers.docker.operators.docker import DockerOperator
+
+try:
+    from airflow.providers.docker.operators.docker import DockerOperator
+except ImportError:  # pragma: no cover
+    from airflow.operators.docker import DockerOperator
 
 default_args = {
     "api_version": "auto",
