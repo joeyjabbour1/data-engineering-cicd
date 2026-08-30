@@ -36,6 +36,10 @@ data/
 # dbt
 dbt/target/
 dbt/dbt_packages/
+dbt/order_pipeline/target/
+dbt/order_pipeline/dbt_packages/
+dbt/order_pipeline/logs/
+
 
 
 # Ruff
@@ -45,3 +49,5 @@ dbt/dbt_packages/
 airflow/logs/
 logs/
 plugins/
+
+
