@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Cleaned and typed orders from raw, with validity flag"
+    columns:
+      - name: order_id
+        description: "Unique order identifier"
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: "Customer who placed the order"
+        tests:
+          - not_null
+      - name: amount
+        description: "Order amount, cast to decimal"
+        tests:
+          - not_null
+      - name: is_valid_amount
+        description: "True when amount > 0"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [true, false]
